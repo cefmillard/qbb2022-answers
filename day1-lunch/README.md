@@ -50,4 +50,10 @@ d.
 could use grep ';AF=1' ~/qbb2022-answers/day1-lunch/HG00100.vcf | wc -l or grep 'AF=1' ~/qbb2022-answers/day1-lunch/HG00100.vcf | wc -l
 e. 6
 f. cut -f 8 ~/qbb2022-answers/day1-lunch/HG00100.vcf | cut -d ";" -f 7
+=======
+Just for fun.
+a. C to T with 2113
+b.cut -f 8 ~/qbb2022-answers/day1-lunch/HG00100.vcf | cut -d ";" -f 7
+c. 121
+d. 1
  
