@@ -36,5 +36,18 @@ b.
  122 LWK
  128 MSL
  206 YRI
-grep AFR integrated_call_samples.panel  | cut -f 2 | sort | uniq -c
-c. I would perform the same command for each superpopulation replacing AFR with the abbreviation for the respective superpopulation. 
+grep AFR ~/qbb2022-answers/day1-lunch/integrated_call_samples.panel  | cut -f 2 | sort | uniq -c
+c. I would perform the same command for each superpopulation replacing AFR with the abbreviation for the respective superpopulation.
+=======
+5.
+c.
+9514 0|0
+ 127 0|1
+ 178 1|0
+ 181 1|1
+d.
+      15 or 34
+could use grep ';AF=1' ~/qbb2022-answers/day1-lunch/HG00100.vcf | wc -l or grep 'AF=1' ~/qbb2022-answers/day1-lunch/HG00100.vcf | wc -l
+e. 6
+f. cut -f 8 ~/qbb2022-answers/day1-lunch/HG00100.vcf | cut -d ";" -f 7
+ 
