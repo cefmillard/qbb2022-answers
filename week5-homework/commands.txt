@@ -1,0 +1,12 @@
+samtools view -q 10 -b D2_Sox2_R1_input.bam > D2_Sox2_R1_input_filtered.bam
+macs2 callpeak -t D2_Sox2_R1_filtered.bam -c D2_Sox2_R1_input_filtered.bam -g 9.5e7 -B
+bedtools intersect -wa -a NA_peaks.narrowPeak -b r2_peaks.narrowPeak > Sox2_overlapping_peaks.bed
+wc -l Sox2_overlapping_peaks.bed
+wc -l D2_Klf4_peaks.bed
+bedtools intersect -a Sox2_overlapping_peaks.bed -b D2_Klf4_peaks.bed | wc -l
+python scale_bdg.py r2_treat_pileup.bdg r2_treat_pileup_scaled.bdg
+awk '{ if ($2 < 35507055 && $3 > 35502055) print $0 }' D2_H3K27ac_treat_scaled.bdg > D2_H3K27ac_treat_scaled_cropped.bdg
+sort -n -k 5,5rn Sox2_overlapping_peaks.bed | head -300 | awk '{ printf "%s:%i-%i\n", $1, $2, $3 }' > Sox2_overlapping_peaks_samtools_format.bed
+samtools faidx -r Sox2_overlapping_peaks_samtools_format.bed mm10.fa > Sox2_peak_sequences.fa
+meme-chip -maxw 7 Sox2_peak_sequences.fa
+tomtom combined.meme ~/Downloads/motif_databases/MOUSE/HOCOMOCOv11_full_MOUSE_mono_meme_format.meme 
