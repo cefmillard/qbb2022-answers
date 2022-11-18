@@ -1,0 +1,1 @@
+python xpresso_predict.py pretrained_models/K562_trainepoch.11-0.4917.h5 input_fasta/human_promoters.fa.gz predicted_human_promoters.txt
