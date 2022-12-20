@@ -1,1 +1,3 @@
 python xpresso_predict.py pretrained_models/K562_trainepoch.11-0.4917.h5 input_fasta/human_promoters.fa.gz predicted_human_promoters.txt
+
+Question 3. The predictions are different but correlated. The predictions generated from the model don't have as large of a range as those from the paper and predicitions of decreased expression appear to be less common in the model. The predictions may be different because the model used in the paper included information about mRNA half-lives, while the predictions generated from the xpresso_predict.py don't.
