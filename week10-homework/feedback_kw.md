@@ -14,4 +14,6 @@ I see 1, 3, and 4. Please add 2 and 5.
 
 Once you add these, I'll give you full credit for any previous assignment you'd like. If you don't add these 2 things, I'll give you a 6/10 for any previous assignment you'd like. Which assignment is that?
 
-**Edit: I now see part 2. I still don't see part 5. 8/10 for any previous assignment you'd like (which one)? Or after the plot is added, a full 10/10.** 
+**Edit: I now see part 2. I still don't see part 5. 8/10 for any previous assignment you'd like (which one)? Or after the plot is added, a full 10/10.**
+
+**Regrade 3: I now see part 5. 10/10.** 
