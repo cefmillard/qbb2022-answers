@@ -29,3 +29,8 @@
    samtools index -b -o A01_39.bam.bai A01_39.bam
    samtools index -b -o A01_62.bam.bai A01_62.bam
    samtools index -b -o A01_63.bam.bai A01_63.bam
+4. freebayes -f sacCer3.fa -p 1 --genotype-qualities A01_11.bam.bai A01_23.bam  A01_24.bam A01_27.bam A01_31.bam A01_35.bam A01_39.bam A01_62.bam A01_63.bam
+5. vcffilter -f "QUAL > 20" yeast.vcf > yeast_filtered.vcf
+6. vcfallelicprimitives -k -g yeast_filtered.vcf > yeast_filtered_decomposed.vcf
+7. snpeff ann R64-1-1.99 yeast_filtered_decomposed.vcf > yeast_filtered_decomposed_annotated.vcf
+	head -n 1000 yeast_filtered_decomposed_annotated > yeast_filtered_decomposed_annotated_1000.vcf
